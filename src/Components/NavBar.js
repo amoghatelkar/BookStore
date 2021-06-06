@@ -6,7 +6,7 @@ import {StyledFirebaseAuth } from 'react-firebaseui';
 import Request from './Request'
 import Home from './Home'
 import Addbooks from './Addbooks'
-import { Switch, Route, BrowserRouter} from 'react-router-dom'
+import { Switch, Route, HashRouter as Router } from 'react-router-dom'
 import Approved from './Approved';
 import Requested from './Requested';
 import Approve from './Approve';
@@ -60,8 +60,8 @@ export  class NavBar extends Component {
       if(firebase.auth().currentUser.email === "admin@admin.com"){
         return(
           <Nav>
-          <Nav.Link href="/BookStore/">Add Books</Nav.Link>
-          <Nav.Link href="/BookStore/approve">Approve</Nav.Link>
+          <Nav.Link href="/">Add Books</Nav.Link>
+          <Nav.Link href="/approve">Approve</Nav.Link>
           </Nav>
         )
       }
@@ -69,9 +69,9 @@ export  class NavBar extends Component {
       {
         return(<Nav>
           
-          <Nav.Link href="/BookStore/request">Request </Nav.Link>
-          <Nav.Link href="/BookStore/">Approved Books </Nav.Link>
-          <Nav.Link href="/BookStore/requested">Requested Books </Nav.Link>
+          <Nav.Link href="/request">Request </Nav.Link>
+          <Nav.Link href="/">Approved Books </Nav.Link>
+          <Nav.Link href="/requested">Requested Books </Nav.Link>
           </Nav>
         )
 
@@ -84,8 +84,8 @@ export  class NavBar extends Component {
       if(firebase.auth().currentUser.email === "admin@admin.com"){
         return(
           <div>
-          <Route path='BookStore/' exact component={Addbooks} />  
-          <Route path='BookStore/approve' component={Approve} />
+          <Route path='/' exact component={Addbooks} />  
+          <Route path='/approve' component={Approve} />
         
         </div>
         )
@@ -95,12 +95,12 @@ export  class NavBar extends Component {
         return(
           <div>
           
-            <Route path='/BookStore/request' component={Request} />
+            <Route path='/request' component={Request} />
       
-            <Route path='/BookStore/home' component={Home} />
-            <Route path='/BookStore/' exact component={Approved}/>
+            <Route path='/home' component={Home} />
+            <Route path='/' exact component={Approved}/>
       
-            <Route path='/BookStore/requested' component={Requested}/>
+            <Route path='/requested' component={Requested}/>
           </div>
 
         )
@@ -128,7 +128,7 @@ export  class NavBar extends Component {
         return (
             <div>
             
-            <BrowserRouter basename={process.env.PUBLIC_URL}>            
+            <Router basename={process.env.PUBLIC_URL}>            
             <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">Book Store</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -157,7 +157,7 @@ export  class NavBar extends Component {
 
       </Switch>
     </div>
-</BrowserRouter>
+</Router>
 
             </div>
         )

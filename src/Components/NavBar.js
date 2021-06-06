@@ -6,7 +6,7 @@ import { StyledFirebaseAuth } from 'react-firebaseui';
 import Request from './Request'
 import Home from './Home'
 import Addbooks from './Addbooks'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import { Switch, Route, HashRouter as Router } from 'react-router-dom'
 import Approved from './Approved';
 import Requested from './Requested';
 import Approve from './Approve';
@@ -94,7 +94,7 @@ export class NavBar extends Component {
 
           <Route path='/request' component={Request} />
 
-          <Route path='/home' component={Home} />
+          <Route path='/home'  component={Home} />
           <Route path='/' exact component={Approved} />
 
           <Route path='/requested' component={Requested} />
@@ -146,12 +146,12 @@ export class NavBar extends Component {
             <br />
             <div>
 
-              <Switch>
+              
 
                 {this.checkadminpath()}
 
 
-              </Switch>
+              
             </div>
           </Router>
 

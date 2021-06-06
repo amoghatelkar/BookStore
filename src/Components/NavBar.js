@@ -70,7 +70,7 @@ export  class NavBar extends Component {
         return(<Nav>
           
           <Nav.Link href="/BookStore/request">Request </Nav.Link>
-          <Nav.Link href="/">Approved Books </Nav.Link>
+          <Nav.Link href="/BookStore/">Approved Books </Nav.Link>
           <Nav.Link href="/BookStore/requested">Requested Books </Nav.Link>
           </Nav>
         )

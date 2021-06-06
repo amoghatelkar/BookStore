@@ -6,7 +6,7 @@ import {StyledFirebaseAuth } from 'react-firebaseui';
 import Request from './Request'
 import Home from './Home'
 import Addbooks from './Addbooks'
-import { HashRouter, Switch, Route} from 'react-router-dom'
+import { Router, Switch, Route} from 'react-router-dom'
 import Approved from './Approved';
 import Requested from './Requested';
 import Approve from './Approve';

@@ -85,7 +85,7 @@ export  class NavBar extends Component {
         return(
           <div>
           <Route path='/' exact component={Addbooks} />  
-          <Route path='/approve' component={Approve} />
+          <Route path='/BookStore/approve' component={Approve} />
         
         </div>
         )
@@ -95,12 +95,12 @@ export  class NavBar extends Component {
         return(
           <div>
           
-            <Route path='/request' component={Request} />
+            <Route path='/BookStore/request' component={Request} />
       
-            <Route path='/home' component={Home} />
+            <Route path='/BookStore/home' component={Home} />
             <Route path='/' exact component={Approved}/>
       
-            <Route path='/requested' component={Requested}/>
+            <Route path='/BookStore/requested' component={Requested}/>
           </div>
 
         )

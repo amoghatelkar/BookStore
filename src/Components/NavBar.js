@@ -61,7 +61,7 @@ export  class NavBar extends Component {
         return(
           <Nav>
           <Nav.Link href="/">Add Books</Nav.Link>
-          <Nav.Link href="/approve">Approve</Nav.Link>
+          <Nav.Link href="/BookStore/approve">Approve</Nav.Link>
           </Nav>
         )
       }
@@ -69,9 +69,9 @@ export  class NavBar extends Component {
       {
         return(<Nav>
           
-          <Nav.Link href="/request">Request </Nav.Link>
+          <Nav.Link href="/BookStore/request">Request </Nav.Link>
           <Nav.Link href="/">Approved Books </Nav.Link>
-          <Nav.Link href="/requested">Requested Books </Nav.Link>
+          <Nav.Link href="/BookStore/requested">Requested Books </Nav.Link>
           </Nav>
         )
 

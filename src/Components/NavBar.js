@@ -6,7 +6,7 @@ import {StyledFirebaseAuth } from 'react-firebaseui';
 import Request from './Request'
 import Home from './Home'
 import Addbooks from './Addbooks'
-import { Router, Switch, Route} from 'react-router-dom'
+import { Switch, Route, BrowserRouter} from 'react-router-dom'
 import Approved from './Approved';
 import Requested from './Requested';
 import Approve from './Approve';
@@ -128,7 +128,7 @@ export  class NavBar extends Component {
         return (
             <div>
             
-            <Router basename={process.env.PUBLIC_URL}>            
+            <BrowserRouter basename={process.env.PUBLIC_URL}>            
             <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">Book Store</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -157,7 +157,7 @@ export  class NavBar extends Component {
 
       </Switch>
     </div>
-</Router>
+</BrowserRouter>
 
             </div>
         )

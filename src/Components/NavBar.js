@@ -128,7 +128,7 @@ export  class NavBar extends Component {
         return (
             <div>
             
-            <HashRouter basename={"/BookStore/#"}>            
+            <HashRouter basename={process.env.PUBLIC_URL}>            
             <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">Book Store</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
